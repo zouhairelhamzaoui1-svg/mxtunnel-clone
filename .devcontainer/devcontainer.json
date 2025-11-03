@@ -1,0 +1,17 @@
+{
+  "name": "MXTunnelClone Android Build",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "extensions": [
+    "ms-vscode.cpptools",
+    "ms-vscode.cmake-tools",
+    "android-foundation.android-studio-codespaces"
+  ],
+  "settings": {
+    "cmake.configureOnOpen": true,
+    "cmake.generator": "Ninja"
+  },
+  "postCreateCommand": "sdkmanager \"platforms;android-34\" \"build-tools;34.0.0\" && sdkmanager \"ndk;25.1.8937393\"",
+  "forwardPorts": [1080]
+}
